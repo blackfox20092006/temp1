@@ -37,15 +37,16 @@ def runnow(n):
         y = row_index * (window_height + spacing - 100)
         return x, y
     def find_until_xpath(driver, name, status, content):
+        e = None
         for i in range(100):
             try:
-                for i in range(100):
-                    try:
-                        sleep(0.2)
-                        e = driver.find_element(By.XPATH, name)
-                        break
-                    except:
-                        continue
+                sleep(0.2)
+                e = driver.find_element(By.XPATH, name)
+                break
+            except:
+                continue
+        for i in range(200):
+            try:
                 if status == 0:
                     e.click()
                 elif status == 1:

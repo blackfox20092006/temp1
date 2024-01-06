@@ -23,7 +23,7 @@ with open('ua.txt') as ff:
 ff.close()
 from selenium import webdriver
 char = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-email = f'{"".join([random.choice(char) for i in range(20)])}%40gmail.com'
+email = f'{"".join([random.choice(char) for i in range(20)])}@gmail.com'
 from selenium.webdriver.support.ui import WebDriverWait
 def runnow(n):
     def calculate_window_position(window_index):
